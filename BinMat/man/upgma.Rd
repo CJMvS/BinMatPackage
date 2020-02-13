@@ -10,27 +10,30 @@ upgma(
   size = 0.55,
   lab_size = 0.55,
   method = "binary",
-  hclust = "average"
+  hclust = "average",
+  fromFile = FALSE
 )
 }
 \arguments{
-\item{x}{Consolidated binarx matrix}
+\item{x}{Consolidated binarx matrix.}
 
-\item{bts}{Bootstrap replications}
+\item{bts}{Bootstrap replications. Set to 10 by default.}
 
-\item{size}{Size of plot.}
+\item{size}{Size of plot. Set to 0.55 by default.}
 
-\item{lab_size}{Size of label text.}
+\item{lab_size}{Size of label text. Set to 0.55 by default.}
 
-\item{method}{Distance method. Set to 'binary' (=Jaccard distance) by default}
+\item{method}{Distance method. Set to 'binary' (=Jaccard distance) by default.}
 
 \item{hclust}{Clustering method. Set to 'average' (=UPGMA) by default}
+
+\item{fromFile}{Indicates whether the binary data used by the function has been consolidated by BinMat, or whether it comes from the user's own file. Set to FALSE by default (in the assumption that the data has been consolidated by BinMat, and that that object is being passed to the function).}
 }
 \value{
 UPGMA tree
 }
 \description{
-Creates a UPGMA hierarchical clustering tree
+Creates a UPGMA hierarchical clustering tree, with a specified number of bootstrap repetitions.
 }
 \examples{
 data(BinMatInput_reps)

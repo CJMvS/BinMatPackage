@@ -1,16 +1,16 @@
 #' @title Removes samples with peaks equal to or less than a specified threshold value.
 #'
 #' @description Removes samples with a peak number less than a specified value.
-#' @param x Consolidated binary matrix used for the creation of nMDS
-#' @param thresh Peak threshold value for removal
+#' @param x Binary matrix - consolidated or original.
+#' @param thresh Peak threshold value for removal.
 #'
-#' @return Filtered dataset
-#' @examples  mat = BinMatInput_ordination
-#' new = peakRemove(mat, 4)
+#' @return Filtered dataset, and either the row name/s or row number/s of samples that were removed.
+#' @examples mat = BinMatInput_ordination
+#' new = peak.remove(mat, 4)
 #'
 #' @export
 
-peakRemove = function(x, thresh) {
+peak.remove = function(x, thresh) {
 
   #row.names(x) <- x[[1]] # make the sample names rownames,
   #x[,1] <- NULL # and then remove the sample name column

@@ -1,6 +1,6 @@
 #' @title Creates a shepard plot.
 #'
-#' @description Creates a Shepard plot for the nMDS.
+#' @description Creates a Shepard plot for the nMDS. This indicates the 'goodness of fit' of the original distance matrix vs the ordination representation. A high R-squared value is favourable.
 #'
 #' @param x Consolidated binary matrix.
 #' @param k_val Number of dimensions. Set to 2 by default.

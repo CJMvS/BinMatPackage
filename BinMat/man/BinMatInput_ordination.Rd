@@ -14,7 +14,7 @@ Example input data containing a consolidated binary matrix with groups
 \examples{
 data(BinMatInput_ordination)
 mat = BinMatInput_ordination
-group_names(mat)
+group.names(mat)
 scree(mat)
 shepard(mat)
 clrs = c("red", "green", "black")

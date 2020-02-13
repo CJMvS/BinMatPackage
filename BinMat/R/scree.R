@@ -1,9 +1,9 @@
 #' @title Draws a scree plot.
 #'
-#' @description Creates a scree plot for the nMDS.
+#' @description Creates a scree plot for the nMDS. This indicates the optimum number of dimensions to use to minimise the stress value.    The stress value is indicated by a red dotted line at 0.15. Values equal to or below this are considered acceptable.
 #'
 #' @param x Consolidated binary matrix with grouping information in column 2.
-#' @param dimensions Number of dimensions to plot.
+#' @param dimensions Number of dimensions to plot. Set to 4 by default.
 #' @param dist_meth Distance method. Set to "binary" by default. Other options are "euclidean", "maximum", "manhattan", "canberra", or "minkowski".
 #' @return Scree plot.
 #' @examples mat = BinMatInput_ordination

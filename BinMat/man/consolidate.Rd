@@ -2,18 +2,18 @@
 % Please edit documentation in R/consolidate.R
 \name{consolidate}
 \alias{consolidate}
-\title{Consolidate replicate pairs in a binary matrix}
+\title{Consolidates replicate pairs in a binary matrix.}
 \usage{
 consolidate(x)
 }
 \arguments{
-\item{x}{A CSV file containing replicate pairs of binary data.}
+\item{x}{A CSV file containing replicate pairs of binary data. See the example input file "BinMatInput_reps".}
 }
 \value{
-Consolidated binary matrix. For each replicate pair at each locus, 1 & 1 -> 1 (shared presence), 0 & 0 -> 0 (shared absence), 0 & 1 -> ? (ambiguity).
+Consolidated binary matrix.
 }
 \description{
-Reads in a binary matrix comprising replicate pairs.
+Reads in a binary matrix comprising replicate pairs and consolidates each pair into a consensus read. For each replicate pair at each locus, 1 & 1 -> 1 (shared presence), 0 & 0 -> 0 (shared absence), 0 & 1 -> ? (ambiguity).
 }
 \examples{
 data(BinMatInput_reps)

@@ -8,11 +8,11 @@
 #'
 #' @examples data(BinMatInput_reps)
 #' mat = BinMatInput_reps
-#' check_data(mat)
-#' pks = peaks(mat)
+#' check.data(mat)
 #' cons = consolidate(mat)
+#' pks = peaks.consolidated(cons)
 #' err = errors(cons)
-#' rem = peakRemove(cons, 4)
+#' rem = peak.remove(cons, 4)
 #' clust = upgma(cons)
 #'
 #'

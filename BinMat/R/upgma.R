@@ -1,13 +1,14 @@
 #' @title Draws a hierarchical clustering tree (UPGMA).
 #'
-#' @description Creates a UPGMA hierarchical clustering tree
+#' @description Creates a UPGMA hierarchical clustering tree, with a specified number of bootstrap repetitions.
 #'
-#' @param x Consolidated binarx matrix
-#' @param bts Bootstrap replications
-#' @param method Distance method. Set to 'binary' (=Jaccard distance) by default
+#' @param x Consolidated binarx matrix.
+#' @param bts Bootstrap replications. Set to 10 by default.
+#' @param method Distance method. Set to 'binary' (=Jaccard distance) by default.
 #' @param hclust Clustering method. Set to 'average' (=UPGMA) by default
-#' @param size Size of plot.
-#' @param lab_size Size of label text.
+#' @param size Size of plot. Set to 0.55 by default.
+#' @param lab_size Size of label text. Set to 0.55 by default.
+#' @param fromFile Indicates whether the binary data used by the function has been consolidated by BinMat, or whether it comes from the user's own file. Set to FALSE by default (in the assumption that the data has been consolidated by BinMat, and that that object is being passed to the function).
 #'
 #'
 #' @return UPGMA tree
@@ -18,10 +19,13 @@
 #'
 #' @export
 
-upgma = function(x, bts = 10, size = 0.55, lab_size = 0.55, method = "binary", hclust="average"){
+upgma = function(x, bts = 10, size = 0.55, lab_size = 0.55, method = "binary", hclust="average", fromFile = FALSE){
 
-  #x = x[,-1]
-  #row.names(x) = x[,1]
+  if (fromFile == TRUE){
+    row.names(x) <- x[[1]]
+    x[,1] <- NULL
+  }
+
   new_names_upgma = substring(row.names(x),0,50)
   row.names(x) = new_names_upgma
   x[x=="?"] = NA

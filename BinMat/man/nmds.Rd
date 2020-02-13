@@ -11,7 +11,7 @@ nmds(
   pt_size = 1,
   colours,
   shapes,
-  labs = F
+  labs = FALSE
 )
 }
 \arguments{
@@ -19,25 +19,25 @@ nmds(
 
 \item{dist_meth}{Distance method. Set to "binary" by default. Other options are "euclidean", "maximum", "manhattan", "canberra", or "minkowski".}
 
-\item{k_val}{Number of dimensions for the nMDS plot.}
+\item{k_val}{Number of dimensions for the nMDS plot. Set to 2 by default.}
 
-\item{pt_size}{Point size for symbols on the plot.}
+\item{pt_size}{Point size for symbols on the plot. Set to 1 by default.}
 
 \item{colours}{Vector containing colours to be assigned to groups.}
 
 \item{shapes}{Vector containing pch values for shapes to be used for points.}
 
-\item{labs}{Indicate whether labels should appear on the graph or not (T or F). Default = F.}
+\item{labs}{Indicate whether labels should appear on the graph or not (TRUE or FALSE). Default = FALSE.}
 }
 \value{
 nMDS plot.
 }
 \description{
-Creates an nMDS plot from a consolidated binary matrix with grouping information.
+Creates an nMDS plot from a consolidated binary matrix with grouping information. Colours and shapes of plotted points need to be specified. For example, if there are two groups, then: clrs = c("red", "blue"), sh = c(16, 16). This assigns red to the first group name, and blue to the second. Both will have a pch shape of 16 (round dot). These two vectors are then passed to the function nmds() as: colours = clrs, shapes = sh.
 }
 \examples{
  mat = BinMatInput_ordination
-group_names(mat)
+group.names(mat)
 clrs = c("red", "green", "black")
 shp = c(16,16,16)
 nmds(mat, colours = clrs, shapes = shp, labs = TRUE)

@@ -6,7 +6,7 @@
 #' @format A dataframe with columns for loci, and rows of replicate pairs. Grouping information is in the second column.
 #' @examples data(BinMatInput_ordination)
 #' mat = BinMatInput_ordination
-#' group_names(mat)
+#' group.names(mat)
 #' scree(mat)
 #' shepard(mat)
 #' clrs = c("red", "green", "black")

@@ -1,11 +1,10 @@
-#' @title Consolidate replicate pairs in a binary matrix
+#' @title Consolidates replicate pairs in a binary matrix.
 #'
-#' @description Reads in a binary matrix comprising replicate pairs.
+#' @description Reads in a binary matrix comprising replicate pairs and consolidates each pair into a consensus read. For each replicate pair at each locus, 1 & 1 -> 1 (shared presence), 0 & 0 -> 0 (shared absence), 0 & 1 -> ? (ambiguity).
 #'
-#' @param x A CSV file containing replicate pairs of binary data.
+#' @param x A CSV file containing replicate pairs of binary data. See the example input file "BinMatInput_reps".
 #'
-#' @return Consolidated binary matrix. For each replicate pair at each locus, 1 & 1 -> 1 (shared presence), 0 & 0 -> 0 (shared absence), 0 & 1 -> ? (ambiguity).
-#'
+#' @return Consolidated binary matrix.
 #' @examples data(BinMatInput_reps)
 #' mat = BinMatInput_reps
 #' cons = consolidate(mat)
