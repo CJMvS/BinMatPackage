@@ -22,6 +22,8 @@ peak.remove = function(x, thresh) {
     peak_record[i,]=count
   }
 
+  if(thresh <= 0)
+    stop("Enter a threshold value greater than zero.")
   if(thresh > max(peak_record))
     stop(c("Do not remove samples with peaks less than ", max(peak_record)+1, ", as that the maximum peak number detected in your data set is ", max(peak_record), "."))
 

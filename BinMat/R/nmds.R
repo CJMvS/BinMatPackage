@@ -21,6 +21,9 @@
 
 nmds = function(x, dist_meth = "binary", k_val = 2, pt_size = 1, colours, shapes, labs = FALSE){
 
+  if(k_val <= 0)
+    stop("Enter a positive k-value.")
+
   row.names(x) <- x[[1]] # make the sample names rownames,
   x[,1] <- NULL # and then remove the sample name column
 

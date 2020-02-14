@@ -14,6 +14,9 @@
 
 shepard = function(x, k_val = 2, dist_meth = "binary"){
 
+  if(k_val <= 0)
+    stop("Enter a positive k-value.")
+
   row.names(x) <- x[[1]] # make the sample names rownames,
   x[,1] <- NULL # and then remove the sample name column
 

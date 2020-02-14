@@ -14,6 +14,9 @@
 
 scree = function(x, dimensions = 4, dist_meth = "binary") {
 
+  if(dimensions <=0)
+    stop("Enter a positive number for dimensions.")
+
   row.names(x) <- x[[1]] # make the sample names rownames,
   x[,1] <- NULL # and then remove the sample name column
 

@@ -21,6 +21,9 @@
 
 upgma = function(x, bts = 10, size = 0.55, lab_size = 0.55, method = "binary", hclust="average", fromFile = FALSE){
 
+  if(bts <= 0)
+    stop("Enter a bootstrap repetition value > 0.")
+
   if (fromFile == TRUE){
     row.names(x) <- x[[1]]
     x[,1] <- NULL
