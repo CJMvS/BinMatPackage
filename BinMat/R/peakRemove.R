@@ -40,10 +40,10 @@ peak.remove = function(x, thresh) {
 
    # names(x_removed)[1]="Group"
 
-    writeLines(c("Number of samples removed: ", nrow(x_removed)))
+    message(c("Number of samples removed: ", nrow(x_removed)))
 
     if(nrow(x_removed) > 0)
-    writeLines(c("This was/these were: ", rownames(x_removed)))
+    message(c("This was/these were: ", rownames(x_removed)))
 
     return(x_keep)
   }

@@ -33,7 +33,7 @@ upgma(
 UPGMA tree
 }
 \description{
-Creates a UPGMA hierarchical clustering tree, with a specified number of bootstrap repetitions.
+Creates an unweighted pair group method with arithmetic mean (UPGMA) hierarchical clustering tree, with a specified number of bootstrap repetitions.
 }
 \examples{
 data(BinMatInput_reps)

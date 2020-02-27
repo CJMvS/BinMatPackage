@@ -33,7 +33,7 @@ nmds(
 nMDS plot.
 }
 \description{
-Creates an nMDS plot from a consolidated binary matrix with grouping information. Colours and shapes of plotted points need to be specified. For example, if there are two groups, then: clrs = c("red", "blue"), sh = c(16, 16). This assigns red to the first group name, and blue to the second. Both will have a pch shape of 16 (round dot). These two vectors are then passed to the function nmds() as: colours = clrs, shapes = sh.
+Creates an non-metric multidimensional scaling plot from a consolidated binary matrix with grouping information. Colours and shapes of plotted points need to be specified. For example, if there are two groups, then: clrs = c("red", "blue"), sh = c(16, 16). This assigns red to the first group name, and blue to the second. Both will have a pch shape of 16 (round dot). These two vectors are then passed to the function nmds() as: colours = clrs, shapes = sh.
 }
 \examples{
  mat = BinMatInput_ordination

@@ -1,6 +1,6 @@
 #' @title Creates a non-metric multidimensional scaling plot (nMDS).
 #'
-#' @description Creates an nMDS plot from a consolidated binary matrix with grouping information. Colours and shapes of plotted points need to be specified. For example, if there are two groups, then: clrs = c("red", "blue"), sh = c(16, 16). This assigns red to the first group name, and blue to the second. Both will have a pch shape of 16 (round dot). These two vectors are then passed to the function nmds() as: colours = clrs, shapes = sh.
+#' @description Creates an non-metric multidimensional scaling plot from a consolidated binary matrix with grouping information. Colours and shapes of plotted points need to be specified. For example, if there are two groups, then: clrs = c("red", "blue"), sh = c(16, 16). This assigns red to the first group name, and blue to the second. Both will have a pch shape of 16 (round dot). These two vectors are then passed to the function nmds() as: colours = clrs, shapes = sh.
 #'
 #' @param x Consolidated binary matrix with grouping information in the second column.
 #' @param dist_meth Distance method. Set to "binary" by default. Other options are "euclidean", "maximum", "manhattan", "canberra", or "minkowski".
@@ -34,7 +34,7 @@ nmds = function(x, dist_meth = "binary", k_val = 2, pt_size = 1, colours, shapes
 
   x = as.data.frame(x)
 
-  d = stats::dist((x[,2:ncol(x)]), method = dist_meth, diag = TRUE, upper = T)
+  d = stats::dist((x[,2:ncol(x)]), method = dist_meth, diag = TRUE, upper = TRUE)
   d = as.data.frame(as.matrix(d))
   d2 = stats::as.dist(d)
   d2 = d2 + 0.01 # adding 0.01 here to cover for cases where there are identical sequences, leading to zero distances. Zero distances give the error "Warning: Error in isoMDS: zero or negative distance between objects x and y"

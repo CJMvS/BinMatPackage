@@ -16,9 +16,9 @@ check.data = function(x){
   row.names(x) <- x[[1]]
   x[,1] <- NULL
   x[,] <- sapply(x[,], as.numeric)
-  answer = which(x != 0 & x != 1 & x != "?", arr.ind = T)
-  if(length(answer) > 0) print(answer)
-  else {writeLines("None found.")}
+  answer = which(x != 0 & x != 1 & x != "?", arr.ind = TRUE)
+  if(length(answer) > 0) message(answer)
+  else {message("None found.")}
 
 }
 
