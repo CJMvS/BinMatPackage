@@ -7,7 +7,7 @@
 peaks.consolidated(x)
 }
 \arguments{
-\item{x}{Binary matrix comprising replicate pairs.}
+\item{x}{Consolidated binary matrix (consolidated in BinMat, or a pre-processed matrix from file).}
 }
 \value{
 Peak information.

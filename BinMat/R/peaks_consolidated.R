@@ -2,7 +2,7 @@
 #'
 #' @description Returns total, maximum, and minimum number of peaks in the binary matrix.
 #'
-#' @param x Binary matrix comprising replicate pairs.
+#' @param x Consolidated binary matrix (consolidated in BinMat, or a pre-processed matrix from file).
 #'
 #' @return Peak information.
 #'
