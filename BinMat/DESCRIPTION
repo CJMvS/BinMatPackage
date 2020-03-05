@@ -11,6 +11,7 @@ LazyData: true
 RoxygenNote: 7.0.2
 Depends: R (>= 3.0)
 Imports: pvclust (>= 2.0), 
+         magrittr, 
          MASS (>= 7.3),
          stats (>= 3.4.0),
          graphics (>= 3.4.0),

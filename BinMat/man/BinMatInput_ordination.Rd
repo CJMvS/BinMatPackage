@@ -4,7 +4,7 @@
 \name{BinMatInput_ordination}
 \alias{BinMatInput_ordination}
 \title{Example input data containing a consolidated binary matrix with groups}
-\format{A dataframe with columns for loci, and rows of replicate pairs. Grouping information is in the second column.}
+\format{A dataframe with columns for loci, and rows of samples. Grouping information is in the second column.}
 \usage{
 data(BinMatInput_ordination)
 }
