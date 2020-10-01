@@ -15,9 +15,13 @@ trees without having to use multiple software programs and input files, or
 rely on previous programming experience.
 
 The package is available on CRAN:
+
 https://cran.r-project.org/web/packages/BinMat/index.html
-Please see the associated vignette for detailed descriptions of all the functions, and worked examples.
+
+Please see the associated vignette for detailed descriptions of all the functions, and worked examples:
+
 https://cran.r-project.org/web/packages/BinMat/vignettes/BinMat.html
 
 The R Shiny application version of this package is available here:
+
 https://clarkevansteenderen.shinyapps.io/BINMAT/ 
