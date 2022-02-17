@@ -16,9 +16,9 @@ and allows the user to visualize their data as ordination plots and clustering
 trees without having to use multiple software programs and input files, or
 rely on previous programming experience.
 
-## Download the R package
+# Download the R package
 
-### 💡 CRAN
+## 💡 CRAN
 
 https://cran.r-project.org/web/packages/BinMat/index.html
 
@@ -26,19 +26,19 @@ Please see the associated vignette for detailed descriptions of all the function
 
 https://cran.r-project.org/web/packages/BinMat/vignettes/BinMat.html
 
-### 💡 FROM THE GITHUB REPOSITORY
+## 💡 FROM THE GITHUB REPOSITORY
 
 ```{r}
 devtools::install_github("clarkevansteenderen/BinMat_R")
 ```
 
-## Access the package as an R Shiny application:
+# Access the package as an R Shiny application:
 
-### 💡 VIA THE SHINY APPS SERVER:    
+## 💡 VIA THE SHINY APPS SERVER:    
 
 https://clarkevansteenderen.shinyapps.io/BINMAT/
 
-### 💡 VIA THE GITHUB REPOSITORY:     
+## 💡 VIA THE GITHUB REPOSITORY:     
 
 ```{r}
 install.packages("shiny")
