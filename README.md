@@ -24,4 +24,10 @@ https://cran.r-project.org/web/packages/BinMat/vignettes/BinMat.html
 
 The R Shiny application version of this package is available here:
 
-https://clarkevansteenderen.shinyapps.io/BINMAT/ 
+https://clarkevansteenderen.shinyapps.io/BinMat/
+
+Install in R:
+
+```{r}
+devtools::install_github("clarkevansteenderen/BinMat_R")
+```
