@@ -9,8 +9,8 @@ nmds(
   dist_meth = "binary",
   k_val = 2,
   pt_size = 1,
-  colours,
-  shapes,
+  colours = "Set1",
+  shapes = 16,
   labs = FALSE,
   include_ellipse = FALSE,
   ellipse_type = "norm",
@@ -27,9 +27,12 @@ nmds(
 
 \item{pt_size}{Point size for symbols on the plot. Set to 1 by default.}
 
-\item{colours}{Vector containing colours to be assigned to groups.}
+\item{colours}{Vector containing colours to be assigned to groups. The default is the "Set2" option in the RColorBrewer palette set. See <http://applied-r.com/rcolorbrewer-palettes/> for more palette options.
+Alternatively, the colours can be set manually using, for example, c("red", "green", "blue"), thereby setting a colour for each group
+in your dataset.}
 
-\item{shapes}{Vector containing pch values for shapes to be used for points.}
+\item{shapes}{Vector containing pch values for shapes to be used for points. The default is set to round filled circles (pch = 16).
+To change this to custom shapes, use something like c(2,3,16) for each group you have in the dataset.}
 
 \item{labs}{Indicate whether labels should appear on the graph or not (TRUE or FALSE). Default = FALSE.}
 
