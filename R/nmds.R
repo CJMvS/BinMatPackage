@@ -12,6 +12,7 @@
 #' @param shapes Vector containing pch values for shapes to be used for points. The default is set to round filled circles (pch = 16).
 #' To change this to custom shapes, use something like c(2,3,16) for each group you have in the dataset.
 #' @param labs Indicate whether labels should appear on the graph or not (TRUE or FALSE). Default = FALSE.
+#' @param legend_pos Indicate the position of the legend. Default = "right", but other options are "left", "bottom", "top", or "none"
 #' @param include_ellipse Indicate whether ellipses should be included around groups. Default = FALSE.
 #' @param ellipse_type Select the type of ellipses to include around groups. Options are "convex", "confidence", "t", "norm", and "euclid". See the ggpubr::ggscatter() function documentation for more details.
 #' @param dimension1 Indicate the first dimension to plot (1, 2, or 3) for the x axis. If k = 2, the first two dimensions will automatically be plotted. If k = 3, select between the three.
@@ -27,6 +28,7 @@
 #' @export
 
 nmds = function(x, dist_meth = "binary", k_val = 2, pt_size = 1, colours = "Set1", shapes = 16, labs = FALSE,
+                legend_pos = "right",
                 include_ellipse = FALSE, ellipse_type = "norm", dimension1 = 1, dimension2 = 2){
 
   if(k_val <= 0)
@@ -75,7 +77,9 @@ nmds = function(x, dist_meth = "binary", k_val = 2, pt_size = 1, colours = "Set1
                     shape = shapes_nmds[fac],
                     ellipse = include_ellipse,
                     ellipse.type = ellipse_type,
-                    size = pt_size
+                    size = pt_size,
+                    legend = legend_pos,
+                    legend.title = "Groups"
   ) ) # end of suppress warnings
 
 
