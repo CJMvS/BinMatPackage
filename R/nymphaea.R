@@ -1,5 +1,6 @@
-#' Example input file of Nymphaea ISSR data, taken from Reid et. al. (2021). This dataset has already been consolidated, and can be used
-#' as input for the generation of an nMDS plot.
+#' Example input file of Nymphaea ISSR data, taken from Reid et. al. (2021).
+#' This dataset has already been consolidated, and can be used
+#' as input for the generation of an nMDS plot. The paper can be found here: <https://www.sciencedirect.com/science/article/pii/S0304377021000218>
 #' @docType data
 #'
 #' @usage data(nymphaea)

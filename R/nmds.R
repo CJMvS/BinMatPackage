@@ -6,9 +6,9 @@
 #' @param dist_meth Distance method. Set to "binary" by default. Other options are "euclidean", "maximum", "manhattan", "canberra", or "minkowski".
 #' @param k_val Number of dimensions for the nMDS plot. Set to 2 by default.
 #' @param pt_size Point size for symbols on the plot. Set to 1 by default.
-#' @param colours Vector containing colours to be assigned to groups. The default is the "Set2" option in the RColorBrewer palette set. See <http://applied-r.com/rcolorbrewer-palettes/> for more palette options.
+#' @param colours Vector containing colours to be assigned to groups. This can be changed to the options available in the RColorBrewer palette set (e.g. "Set1"). See <http://applied-r.com/rcolorbrewer-palettes/> for more palette options.
 #'  Alternatively, the colours can be set manually using, for example, c("red", "green", "blue"), thereby setting a colour for each group
-#'  in your dataset.
+#'  in your dataset. There are 28 default colours that will be set automatically to your groups.
 #' @param shapes Vector containing pch values for shapes to be used for points. The default is set to round filled circles (pch = 16).
 #' To change this to custom shapes, use something like c(2,3,16) for each group you have in the dataset.
 #' @param labs Indicate whether labels should appear on the graph or not (TRUE or FALSE). Default = FALSE.
@@ -22,14 +22,22 @@
 #' @examples  mat = BinMatInput_ordination
 #' group.names(mat)
 #' clrs = c("red", "green", "black")
-#' shps = c(16,16,16)
+#' shps = c(16,10,12)
 #' nmds(mat, colours = clrs, shapes = shps, labs = TRUE, include_ellipse = TRUE)
 #'
 #' @export
 
-nmds = function(x, dist_meth = "binary", k_val = 2, pt_size = 1, colours = "Set1", shapes = 16, labs = FALSE,
+nmds = function(x, dist_meth = "binary", k_val = 2, pt_size = 1,
+                colours = c("dodgerblue", "black", "red", "green3", "orange", "darkblue", "gold2",
+                            "darkgreen", "darkred", "grey", "darkgrey", "magenta", "darkorchid",
+                            "purple", "brown", "coral3", "turquoise", "deeppink", "lawngreen",
+                            "deepskyblue", "tomato", "yellow", "yellowgreen",
+                            "royalblue", "olivedrab", "midnightblue", "indianred1", "darkturquoise"),
+                shapes = 16, labs = FALSE,
                 legend_pos = "right",
-                include_ellipse = FALSE, ellipse_type = "norm", dimension1 = 1, dimension2 = 2){
+                include_ellipse = FALSE,
+                ellipse_type = "norm", dimension1 = 1,
+                dimension2 = 2){
 
   if(k_val <= 0)
     stop("Enter a positive k-value.")
@@ -79,7 +87,9 @@ nmds = function(x, dist_meth = "binary", k_val = 2, pt_size = 1, colours = "Set1
                     ellipse.type = ellipse_type,
                     size = pt_size,
                     legend = legend_pos,
-                    legend.title = "Groups"
+                    legend.title = "Groups",
+                    show.legend.text = FALSE
+
   ) ) # end of suppress warnings
 
 
